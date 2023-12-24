@@ -1,0 +1,50 @@
+.ticket-card {
+	background-color: #ffffff;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 7px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.ticket-card__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.ticket-card__price {
+	color: #2196f3;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.ticket-card__flight-info {
+	display: flex;
+	text-align: left;
+	justify-content: space-between;
+}
+
+.ticket-card__flight-info:nth-child(2) {
+	margin-bottom: 10px;
+}
+
+.flight-info__block {
+	display: flex;
+	flex-direction: column;
+}
+
+.flight-info__title {
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+	color: #a0b0b9;
+}
+
+.flight-info__text {
+	font-size: 14px;
+	line-height: 21px;
+	color: #4a4a4a;
+	font-weight: 600;
+}

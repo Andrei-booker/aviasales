@@ -1,0 +1,74 @@
+.tab-filter__content {
+	margin-bottom: 20px;
+	display: flex;
+}
+
+.tab-filter__button {
+	padding: 15px;
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	color: #4a4a4a;
+	background-color: #ffffff;
+	border: solid 1px #dfe5ec;
+	cursor: pointer;
+}
+
+.tab-filter__button:hover {
+	color: #ffffff;
+	background-color: #2196f3;
+	border: solid 1px #2196f3;
+}
+
+.tab-filter__button--active {
+	color: #ffffff;
+	background-color: #2196f3;
+	border: solid 1px #2196f3;
+}
+
+.tab-filter__button--left {
+	border-bottom-left-radius: 7px;
+	border-top-left-radius: 7px;
+	border-right: none;
+}
+
+.tab-filter__button--right {
+	border-bottom-right-radius: 7px;
+	border-top-right-radius: 7px;
+	border-left: none;
+}
+
+.tab-filter__button--right:hover {
+	border-left: none;
+}
+
+.tab-filter__button--left:hover {
+	border-right: none;
+}
+
+@media screen and (max-width: 375px) {
+	.tab-filter__content {
+		margin-bottom: 20px;
+		display: block;
+	}
+
+	.tab-filter__button {
+		width: 100%;
+		margin-bottom: 5px;
+		border-radius: 7px;
+		border: solid 1px #dfe5ec;
+	}
+
+	.tab-filter__button:hover {
+		color: #ffffff;
+		background-color: #2196f3;
+		border: solid 1px #2196f3;
+	}
+
+	.tab-filter__button--active {
+		color: #ffffff;
+		background-color: #2196f3;
+		border: solid 1px #2196f3;
+	}
+}
