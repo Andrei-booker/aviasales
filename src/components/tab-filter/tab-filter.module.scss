@@ -13,6 +13,8 @@
 	background-color: #ffffff;
 	border: solid 1px #dfe5ec;
 	cursor: pointer;
+	white-space: nowrap;
+	width: 100%;
 }
 
 .tab-filter__button:hover {
@@ -45,6 +47,12 @@
 
 .tab-filter__button--left:hover {
 	border-right: none;
+}
+
+@media screen and (max-width: 670px) {
+	.tab-filter__button {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 375px) {

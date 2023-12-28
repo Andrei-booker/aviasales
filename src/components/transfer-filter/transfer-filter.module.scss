@@ -55,6 +55,12 @@
 	background-color: #f1fcff;
 }
 
+@media screen and (max-width: 670px) {
+	.filters-list {
+		min-width: 25%;
+	}
+}
+
 @media screen and (max-width: 375px) {
 	.filters-list {
 		width: 100%;

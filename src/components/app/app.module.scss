@@ -10,7 +10,20 @@
 
 .central-content {
 	padding-left: 20px;
-	max-width: 502px;
+	min-width: 502px;
+}
+
+@media screen and (max-width: 670px) {
+	.app {
+		padding: 0 15px 15px 15px;
+		text-align: center;
+		width: auto;
+	}
+
+	.central-content {
+		padding-left: 20px;
+		min-width: 72%;
+	}
 }
 
 @media screen and (max-width: 375px) {
@@ -26,6 +39,6 @@
 
 	.central-content {
 		padding-left: 0;
-		width: auto;
+		min-width: auto;
 	}
 }
