@@ -26,6 +26,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	rules: {
+		'default-param-last': 0,
 		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
 	},
 };

@@ -23,7 +23,7 @@
 .ticket-card__flight-info {
 	display: flex;
 	text-align: left;
-	justify-content: space-between;
+	justify-content: flex-start;
 }
 
 .ticket-card__flight-info:nth-child(2) {
@@ -31,8 +31,16 @@
 }
 
 .flight-info__block {
+	margin-right: 70px;
 	display: flex;
 	flex-direction: column;
+}
+
+.flight-info__block:nth-child(2) {
+	margin-right: 100px;
+}
+.flight-info__block:nth-child(3) {
+	margin-right: 0px;
 }
 
 .flight-info__title {
@@ -47,4 +55,28 @@
 	line-height: 21px;
 	color: #4a4a4a;
 	font-weight: 600;
+}
+
+@media screen and (max-width: 670px) {
+	.flight-info__block {
+		margin-right: 55px;
+	}
+
+	.flight-info__block:nth-child(2) {
+		margin-right: 90px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.ticket-card__flight-info {
+		justify-content: space-between;
+	}
+
+	.flight-info__block {
+		margin-right: 0px;
+	}
+
+	.flight-info__block:nth-child(2) {
+		margin-right: 0px;
+	}
 }

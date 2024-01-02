@@ -1,20 +1,16 @@
+import { SHOW_ALL_TICKETS, SET_TRANSFER_FILTER } from "./types";
+
 const initialState = {
-  tickets: [],
   transferFilter: [],
   showAllTickets: false,
-  tabFilter: "SHOW_CHEAPEST",
 };
 
-// eslint-disable-next-line default-param-last
-function reducer(state = initialState, action) {
+function filterReducer(state = initialState, action) {
   switch (action.type) {
-    case "SHOW_ALL_TICKETS":
-      console.log("Show all tickets: ", action.value);
+    case SHOW_ALL_TICKETS:
       return { ...state, showAllTickets: action.value };
-    case "SET_TRANSFER_FILTER":
-      console.log("Transfer filter: ", action);
+    case SET_TRANSFER_FILTER:
       if (action.isChecked && action.checkboxId !== "all") {
-        console.log(action);
         return {
           ...state,
           transferFilter: [...state.transferFilter, action.checkboxId],
@@ -26,14 +22,9 @@ function reducer(state = initialState, action) {
         );
         return { ...state, transferFilter: newTransferFilter };
       }
-
-    case "SET_TAB_FILTER":
-      console.log("Tab filter: ", action.filter);
-      return { ...state, tabFilter: action.filter };
     default:
-      console.log("default");
       return state;
   }
 }
 
-export default reducer;
+export default filterReducer;
