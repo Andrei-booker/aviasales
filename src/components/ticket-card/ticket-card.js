@@ -8,9 +8,9 @@ function TicketCard({ data }) {
 
 	const stopsCount = flight => {
 		if (flight.stops.length === 1) {
-			return 'пересадка';
+			return 'ПЕРЕСАДКА';
 		}
-		return 'пересадки';
+		return 'ПЕРЕСАДКИ';
 	};
 
 	const durationFormat = flight =>
@@ -60,7 +60,7 @@ function TicketCard({ data }) {
 					<span className={classes['flight-info__title']}>
 						{flightTo.stops.length
 							? `${flightTo.stops.length} ${stopsCount(flightTo)}`
-							: 'Без пересадок'}
+							: 'БЕЗ ПЕРЕСАДОК'}
 					</span>
 					<span className={classes['flight-info__text']}>
 						{flightTo.stops.join(', ')}
@@ -86,7 +86,7 @@ function TicketCard({ data }) {
 					<span className={classes['flight-info__title']}>
 						{flightFrom.stops.length
 							? `${flightFrom.stops.length} ${stopsCount(flightFrom)}`
-							: 'Без пересадок'}
+							: 'БЕЗ ПЕРЕСАДОК'}
 					</span>
 					<span className={classes['flight-info__text']}>
 						{flightFrom.stops.join(', ')}

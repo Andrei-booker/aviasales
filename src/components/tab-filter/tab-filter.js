@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setTabFilter } from '../../redux/actions';
 import classes from './tab-filter.module.scss';
+import {
+	showCheapestTickets,
+	showFastestTickets,
+	showOptimalTickets,
+} from '../../redux/actions';
 
 function TabFilter() {
 	const dispatch = useDispatch();
 	const [activeButton, setActiveButton] = useState('showCheapest');
-
-	const onClick = e => {
-		setActiveButton(e.target.name);
-		dispatch(setTabFilter(e.target.name));
-	};
 
 	return (
 		<div className={classes['tab-filter__content']}>
@@ -23,7 +22,10 @@ function TabFilter() {
 						: '',
 				].join(' ')}
 				type='button'
-				onClick={onClick}
+				onClick={e => {
+					setActiveButton(e.target.name);
+					dispatch(showCheapestTickets(e.target.name));
+				}}
 				name='showCheapest'
 			>
 				САМЫЙ ДЕШЕВЫЙ
@@ -36,7 +38,10 @@ function TabFilter() {
 						: '',
 				].join(' ')}
 				type='button'
-				onClick={onClick}
+				onClick={e => {
+					setActiveButton(e.target.name);
+					dispatch(showFastestTickets(e.target.name));
+				}}
 				name='showFastest'
 			>
 				САМЫЙ БЫСТРЫЙ
@@ -50,7 +55,10 @@ function TabFilter() {
 						: '',
 				].join(' ')}
 				type='button'
-				onClick={onClick}
+				onClick={e => {
+					setActiveButton(e.target.name);
+					dispatch(showOptimalTickets(e.target.name));
+				}}
 				name='showOptimal'
 			>
 				ОПТИМАЛЬНЫЙ

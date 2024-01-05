@@ -10,15 +10,15 @@ function filterReducer(state = initialState, action) {
     case SHOW_ALL_TICKETS:
       return { ...state, showAllTickets: action.value };
     case SET_TRANSFER_FILTER:
-      if (action.isChecked && action.checkboxId !== "all") {
+      if (action.isChecked && action.checkboxValue !== "all") {
         return {
           ...state,
-          transferFilter: [...state.transferFilter, action.checkboxId],
+          transferFilter: [...state.transferFilter, action.checkboxValue],
         };
       }
       {
         const newTransferFilter = state.transferFilter.filter(
-          (item) => item !== action.checkboxId,
+          (item) => item !== action.checkboxValue,
         );
         return { ...state, transferFilter: newTransferFilter };
       }

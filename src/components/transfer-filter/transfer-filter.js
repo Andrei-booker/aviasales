@@ -52,13 +52,13 @@ function TransferFilter() {
 				setCheckedTwoTransfers(e.target.checked);
 				setCheckedThreeTransfers(e.target.checked);
 		}
-		if (e.target.id === 'all') {
-			dispatch(setTransferFilter('without_transfer', !checkedWithoutTransfers));
-			dispatch(setTransferFilter('one_transfer', !checkedOneTransfer));
-			dispatch(setTransferFilter('two_transfers', !checkedTwoTransfers));
-			dispatch(setTransferFilter('three_transfers', !checkedThreeTransfers));
+		if (e.target.value === 'all') {
+			dispatch(setTransferFilter('0', !checkedWithoutTransfers));
+			dispatch(setTransferFilter('1', !checkedOneTransfer));
+			dispatch(setTransferFilter('2', !checkedTwoTransfers));
+			dispatch(setTransferFilter('3', !checkedThreeTransfers));
 		}
-		dispatch(setTransferFilter(e.target.id, e.target.checked));
+		dispatch(setTransferFilter(e.target.value, e.target.checked));
 	};
 	return (
 		<div className={classes['filters-list']}>
@@ -67,6 +67,7 @@ function TransferFilter() {
 				<input
 					id='all'
 					type='checkbox'
+					value='all'
 					className={classes['filters-list__checkbox']}
 					onChange={onChange}
 					checked={checkedAllTransfers}
@@ -79,6 +80,7 @@ function TransferFilter() {
 			>
 				<input
 					id='without_transfer'
+					value='0'
 					type='checkbox'
 					className={classes['filters-list__checkbox']}
 					onChange={onChange}
@@ -90,6 +92,7 @@ function TransferFilter() {
 				<input
 					id='one_transfer'
 					type='checkbox'
+					value='1'
 					className={classes['filters-list__checkbox']}
 					onChange={onChange}
 					checked={checkedOneTransfer}
@@ -100,6 +103,7 @@ function TransferFilter() {
 				<input
 					id='two_transfers'
 					type='checkbox'
+					value='2'
 					className={classes['filters-list__checkbox']}
 					onChange={onChange}
 					checked={checkedTwoTransfers}
@@ -113,6 +117,7 @@ function TransferFilter() {
 				<input
 					id='three_transfers'
 					type='checkbox'
+					value='3'
 					className={classes['filters-list__checkbox']}
 					onChange={onChange}
 					checked={checkedThreeTransfers}
